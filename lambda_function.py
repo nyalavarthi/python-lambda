@@ -21,7 +21,7 @@ def lambda_handler(event, context):
         #res_json = response['Body'].read().decode("utf-8")
         
         ### Upload the file into a different Bucket.
-        AWS_BUCKET_NAME = 'ny-lambda-s3evt-dest-bucket'
+        AWS_BUCKET_NAME = 'your destination bucket here..'
         
         stream = response['Body'].read()
         s3.put_object(Body=stream, Bucket=AWS_BUCKET_NAME, Key=key)
